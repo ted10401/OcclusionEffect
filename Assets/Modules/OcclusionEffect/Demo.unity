@@ -179,6 +179,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1351295231555502982, guid: af28ff08eb8f65c4daaff468e6cf0219,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1351295232483034626, guid: af28ff08eb8f65c4daaff468e6cf0219,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1351295232553051330, guid: af28ff08eb8f65c4daaff468e6cf0219,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1351295233416860243, guid: af28ff08eb8f65c4daaff468e6cf0219,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1351295233533792679, guid: af28ff08eb8f65c4daaff468e6cf0219,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af28ff08eb8f65c4daaff468e6cf0219, type: 3}
 --- !u!1001 &107726552
@@ -302,6 +327,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7297729992ccf364fa1f5cd8df65a210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_defaultTargets:
+  - {fileID: 1221940481}
+  Shader: {fileID: 4800000, guid: b4a485cf0b66c4b4eb401ed59854b2ed, type: 3}
+  LayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  RimColor: {r: 0.75, g: 1, b: 1, a: 1}
+  RimPower: 1
 --- !u!81 &258247612
 AudioListener:
   m_ObjectHideFlags: 0
@@ -739,8 +772,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 998544525434653689, guid: aef7797b0cbaa27469008c1936c5f75e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 998544525552633869, guid: aef7797b0cbaa27469008c1936c5f75e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 998544525780385128, guid: aef7797b0cbaa27469008c1936c5f75e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 998544526632591272, guid: aef7797b0cbaa27469008c1936c5f75e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 998544526778276396, guid: aef7797b0cbaa27469008c1936c5f75e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8468525374187313583, guid: aef7797b0cbaa27469008c1936c5f75e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: aef7797b0cbaa27469008c1936c5f75e, type: 3}
+--- !u!4 &1221940481 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 484076860657480818, guid: aef7797b0cbaa27469008c1936c5f75e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1221940480}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1669838461 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 484076860657480818, guid: aef7797b0cbaa27469008c1936c5f75e,
@@ -789,16 +854,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1875820595}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 303524117afe90545b36d088d294d200, type: 3}
+  m_Script: {fileID: 11500000, guid: bf0522ba5d8bdf74ca4672ca504dd501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_target: {fileID: 190527244}
+  m_targetTransform: {fileID: 190527244}
+  m_shader: {fileID: 4800000, guid: 2bfa8cec55be78045a4da235b99cef17, type: 3}
+  m_layerMask:
+    serializedVersion: 2
+    m_Bits: 512
   m_destinationAlpha: 0.25
   m_fadeDuration: 0.25
-  m_transparentLayer:
-    serializedVersion: 2
-    m_Bits: 8192
-  m_transparentShader: {fileID: 4800000, guid: 2bfa8cec55be78045a4da235b99cef17, type: 3}
 --- !u!81 &1875820598
 AudioListener:
   m_ObjectHideFlags: 0

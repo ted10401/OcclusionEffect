@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -216,7 +216,7 @@ PrefabInstance:
     - target: {fileID: 3785199003803691485, guid: 922902b0c1d1d0047b89c33850b8be67,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3785199003803691485, guid: 922902b0c1d1d0047b89c33850b8be67,
         type: 3}
@@ -226,7 +226,7 @@ PrefabInstance:
     - target: {fileID: 3785199003803691485, guid: 922902b0c1d1d0047b89c33850b8be67,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3785199003803691485, guid: 922902b0c1d1d0047b89c33850b8be67,
         type: 3}
@@ -241,7 +241,7 @@ PrefabInstance:
     - target: {fileID: 3785199003803691485, guid: 922902b0c1d1d0047b89c33850b8be67,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3785199003803691485, guid: 922902b0c1d1d0047b89c33850b8be67,
         type: 3}
@@ -253,7 +253,7 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f77681c6d26fe024d8d69c4f0b9dbf49, type: 2}
-    - target: {fileID: 3785199003530418284, guid: 922902b0c1d1d0047b89c33850b8be67,
+    - target: {fileID: 3785199002621413965, guid: 922902b0c1d1d0047b89c33850b8be67,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -263,7 +263,7 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f77681c6d26fe024d8d69c4f0b9dbf49, type: 2}
-    - target: {fileID: 3785199002621413965, guid: 922902b0c1d1d0047b89c33850b8be67,
+    - target: {fileID: 3785199003530418284, guid: 922902b0c1d1d0047b89c33850b8be67,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class OcclusionTransparentEffect : MonoBehaviour
+public class OcclusionTransparentEffectCamera : MonoBehaviour
 {
     public class TransparentInfo
     {
@@ -13,17 +13,25 @@ public class OcclusionTransparentEffect : MonoBehaviour
 
     private readonly int COLOR_ID = Shader.PropertyToID("_Color");
 
-    [SerializeField] private Transform m_target;
+    [SerializeField] private Transform m_targetTransform;
+    public Shader Shader { set { m_shader = value; } }
+    [SerializeField] private Shader m_shader;
+    public LayerMask LayerMask { set { m_layerMask = value; } }
+    [SerializeField] private LayerMask m_layerMask;
     [SerializeField] private float m_destinationAlpha = 0.25f;
     [SerializeField] private float m_fadeDuration = 0.25f;
-    [SerializeField] private LayerMask m_transparentLayer;
-    [SerializeField] private Shader m_transparentShader;
+    private Transform m_cameraTransform;
     private Dictionary<Renderer, TransparentInfo> m_transparentDic = new Dictionary<Renderer, TransparentInfo>();
     private List<Renderer> m_clearList = new List<Renderer>();
 
+    private void Awake()
+    {
+        m_cameraTransform = transform;
+    }
+
     private void Update()
     {
-        if(m_target == null)
+        if(m_targetTransform == null)
         {
             return;
         }
@@ -69,10 +77,10 @@ public class OcclusionTransparentEffect : MonoBehaviour
     private Renderer[] m_cacheRenderers;
     private void UpdateTransparentObjects()
     {
-        m_viewDirection = m_target.position - transform.position;
-        m_distance = Vector3.Distance(transform.position, m_target.position);
-        m_ray = new Ray(transform.position, m_viewDirection);
-        m_raycastHits = Physics.RaycastAll(m_ray, m_distance, m_transparentLayer);
+        m_viewDirection = m_targetTransform.position - m_cameraTransform.position;
+        m_distance = Vector3.Distance(m_cameraTransform.position, m_targetTransform.position);
+        m_ray = new Ray(m_cameraTransform.position, m_viewDirection);
+        m_raycastHits = Physics.RaycastAll(m_ray, m_distance, m_layerMask);
 
         m_renderers.Clear();
         for (int i = 0; i < m_raycastHits.Length; i++)
@@ -111,7 +119,7 @@ public class OcclusionTransparentEffect : MonoBehaviour
 
             for (int i = 0; i < m_cacheTransparentInfo.materials.Length; i++)
             {
-                m_cacheTransparentInfo.materials[i].shader = m_transparentShader;
+                m_cacheTransparentInfo.materials[i].shader = m_shader;
             }
         }
 

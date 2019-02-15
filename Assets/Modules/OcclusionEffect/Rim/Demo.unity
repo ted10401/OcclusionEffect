@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 19148546}
   - component: {fileID: 19148545}
   - component: {fileID: 19148544}
-  - component: {fileID: 19148543}
   m_Layer: 0
   m_Name: Capsule (4)
   m_TagString: Untagged
@@ -132,26 +131,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &19148543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 19148542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 404db8cacac416a4d9404d7b41529e21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_occludeEffectMaterial: {fileID: 2100000, guid: 2aa63cc2fb414ab4f9390453376fe44d,
-    type: 2}
-  m_forceOn: 1
-  m_colliderLayerMask:
-    serializedVersion: 2
-    m_Bits: 4096
-  m_rimColor: {r: 0.75, g: 1, b: 1, a: 1}
-  m_rimPower: 1
 --- !u!136 &19148544
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -294,6 +273,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aef7797b0cbaa27469008c1936c5f75e, type: 3}
+--- !u!4 &243582527 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 484076860657480818, guid: aef7797b0cbaa27469008c1936c5f75e,
+    type: 3}
+  m_PrefabInstance: {fileID: 243582526}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &553584458
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,7 +291,6 @@ GameObject:
   - component: {fileID: 553584462}
   - component: {fileID: 553584461}
   - component: {fileID: 553584460}
-  - component: {fileID: 553584459}
   m_Layer: 0
   m_Name: Capsule (2)
   m_TagString: Untagged
@@ -314,26 +298,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &553584459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 553584458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 404db8cacac416a4d9404d7b41529e21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_occludeEffectMaterial: {fileID: 2100000, guid: 2aa63cc2fb414ab4f9390453376fe44d,
-    type: 2}
-  m_forceOn: 1
-  m_colliderLayerMask:
-    serializedVersion: 2
-    m_Bits: 4096
-  m_rimColor: {r: 0.75, g: 1, b: 1, a: 1}
-  m_rimPower: 1
 --- !u!136 &553584460
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -419,7 +383,6 @@ GameObject:
   - component: {fileID: 559530130}
   - component: {fileID: 559530129}
   - component: {fileID: 559530128}
-  - component: {fileID: 559530127}
   m_Layer: 0
   m_Name: Capsule (1)
   m_TagString: Untagged
@@ -427,26 +390,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &559530127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 559530126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 404db8cacac416a4d9404d7b41529e21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_occludeEffectMaterial: {fileID: 2100000, guid: 2aa63cc2fb414ab4f9390453376fe44d,
-    type: 2}
-  m_forceOn: 1
-  m_colliderLayerMask:
-    serializedVersion: 2
-    m_Bits: 4096
-  m_rimColor: {r: 0.75, g: 1, b: 1, a: 1}
-  m_rimPower: 1
 --- !u!136 &559530128
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -551,6 +494,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7297729992ccf364fa1f5cd8df65a210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_defaultTargets:
+  - {fileID: 243582527}
+  - {fileID: 559530131}
+  - {fileID: 553584463}
+  - {fileID: 1589699482}
+  - {fileID: 19148547}
+  Shader: {fileID: 4800000, guid: b4a485cf0b66c4b4eb401ed59854b2ed, type: 3}
+  LayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  RimColor: {r: 0.75, g: 1, b: 1, a: 1}
+  RimPower: 1
 --- !u!81 &617605980
 AudioListener:
   m_ObjectHideFlags: 0
@@ -609,7 +564,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 617605977}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 14}
+  m_LocalPosition: {x: 0, y: 0, z: 9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -627,7 +582,6 @@ GameObject:
   - component: {fileID: 1589699481}
   - component: {fileID: 1589699480}
   - component: {fileID: 1589699479}
-  - component: {fileID: 1589699478}
   m_Layer: 0
   m_Name: Capsule (3)
   m_TagString: Untagged
@@ -635,26 +589,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1589699478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1589699477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 404db8cacac416a4d9404d7b41529e21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_occludeEffectMaterial: {fileID: 2100000, guid: 2aa63cc2fb414ab4f9390453376fe44d,
-    type: 2}
-  m_forceOn: 1
-  m_colliderLayerMask:
-    serializedVersion: 2
-    m_Bits: 4096
-  m_rimColor: {r: 0.75, g: 1, b: 1, a: 1}
-  m_rimPower: 1
 --- !u!136 &1589699479
 CapsuleCollider:
   m_ObjectHideFlags: 0
